@@ -3,4 +3,7 @@ project(HuffmanDecoder)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(HuffmanDecoder main.cpp)
+add_executable(HuffmanDecoder main.cpp
+        TreeNode.h
+        utils.cpp
+        utils.h)
