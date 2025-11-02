@@ -15,6 +15,8 @@ struct TreeNode {
     explicit TreeNode(std::string w, std::size_t f=1)
         : word(std::move(w)), key_word(word), count(f) {}
 
+    TreeNode() = default;
+
     // Internal
     // FOR USE IN BUILDING OF HUFFMAN TREE (PART 3)
     TreeNode(TreeNode* L, TreeNode* R)
@@ -23,5 +25,4 @@ struct TreeNode {
           count(L->count + R->count),
           left(L), right(R) {}
 };
-
 #endif //HUFFMANDECODER_TREENODE_H
