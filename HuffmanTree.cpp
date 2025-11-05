@@ -1,6 +1,5 @@
 #include "TreeNode.h"
 #include "HuffmanTree.h"
-#include <cctype>
 #include <ostream>
 #include <istream>
 #include <string>
