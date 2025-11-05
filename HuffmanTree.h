@@ -25,8 +25,11 @@ private:
     TreeNode* root_ = nullptr;
 
     static void destroy(TreeNode* n) noexcept {
-        if (!n) return; destroy(n->left);
-            destroy(n->right); delete n;
+        if (!n)
+            return;
+        destroy(n->left);
+        destroy(n->right);
+        delete n;
     }
     static bool isLeaf(const TreeNode* n) {
         return n && !n->left && !n->right && !n->word.empty();
